@@ -1,4 +1,4 @@
-import Bullet from "./Bullet"
+import { Bullet } from "../../ui";
 
 export default function ScreenTwoCard({
     header,

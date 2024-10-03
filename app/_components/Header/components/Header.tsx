@@ -1,8 +1,8 @@
 'use client'
 
-import { MutableRefObject, useEffect, useState } from "react"
+import { MutableRefObject, useEffect, useState } from "react";
 
-export default function Header({
+export function Header({
     refs
 }: {
     refs: MutableRefObject<HTMLElement>[]
@@ -57,20 +57,22 @@ export default function Header({
     }, [])
 
     return <header className={isScroll ? 'header header__scroll' : 'header header__default'}>
-        <div className='header-logo' />
-        <nav className='header-nav'>
-            <button
-                className={activeScreen === 2 ? 'header-nav-button header-nav-button__active' : 'header-nav-button'}
-                onClick={() => refs[0].current.scrollIntoView({ behavior: 'smooth' })}
-            >
-                Преимущества
-            </button>
-            <button
-                className={activeScreen === 3 ? 'header-nav-button header-nav-button__active' : 'header-nav-button'}
-                onClick={() => refs[1].current.scrollIntoView({ behavior: 'smooth' })}
-            >
-                Как работаем
-            </button>
-        </nav>
+        <div className='header-inner'>
+            <div className='header-logo' />
+            <nav className='header-nav'>
+                <button
+                    className={activeScreen === 2 ? 'header-nav-button header-nav-button__active' : 'header-nav-button'}
+                    onClick={() => refs[0].current.scrollIntoView({ behavior: 'smooth' })}
+                >
+                    Преимущества
+                </button>
+                <button
+                    className={activeScreen === 3 ? 'header-nav-button header-nav-button__active' : 'header-nav-button'}
+                    onClick={() => refs[1].current.scrollIntoView({ behavior: 'smooth' })}
+                >
+                    Как работаем
+                </button>
+            </nav>
+        </div>
     </header>
 }

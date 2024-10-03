@@ -1,8 +1,9 @@
 import { forwardRef, MutableRefObject } from "react";
-import ScreenTwoCard from "../../ScreenTwoCard";
+import ScreenTwoCard from "./ScreenTwoCard";
 
-export const ScreenTwo = forwardRef(function ScreenTwo(_, ref: MutableRefObject<HTMLElement>) {
-    return <section className='screen-two' ref={ref}>
+export const ScreenTwo = forwardRef(function ScreenTwo(_, ref: MutableRefObject<HTMLDivElement>) {
+    return <section className='screen-two'>
+        <div className='screen-two-background' ref={ref} />
         <div className='screen-two-header'>
             <h2 className='h2'>
                 Баланс между выручкой и удовлетворённостью пользователей

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Clickwave from '../../../_assets/clickwave.png';
-import Zyphronix from '../../../_assets/zyphronix.png';
-import Novasphere from '../../../_assets/novasphere.png';
+import Clickwave from '../assets/clickwave.png';
+import Zyphronix from '../assets/zyphronix.png';
+import Novasphere from '../assets/novasphere.png';
 
 export function ScreenDivTwo() {
     return <section className='screen-div-two'>

@@ -1,7 +1,8 @@
 'use client'
 
-import Footer from "./_components/Footer";
-import Header from "./_components/Header";
+import { useRef } from "react";
+import { Header } from "./_components/Header";
+import { Footer } from "./_components/Footer";
 import Shapes from './_assets/shapes.png';
 import { ScreenOne } from "./_components/ScreenOne";
 import { ScreenDivOne } from "./_components/ScreenDivOne";
@@ -9,12 +10,11 @@ import { ScreenTwo } from "./_components/ScreenTwo";
 import { ScreenDivTwo } from "./_components/ScreenDivTwo";
 import { ScreenThree } from "./_components/ScreenThree";
 import './home.scss';
-import { useRef } from "react";
 
 export default function Page() {
 
-  const screenTwoRef = useRef<HTMLElement>(null)
-  const screenThreeRef = useRef<HTMLElement>(null)
+  const screenTwoRef = useRef<HTMLDivElement>(null)
+  const screenThreeRef = useRef<HTMLDivElement>(null)
 
   return <>
     <div className='wrapper'>

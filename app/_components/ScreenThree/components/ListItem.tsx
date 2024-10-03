@@ -1,6 +1,6 @@
-import Bullet from "./Bullet"
+import { Bullet } from "../../ui";
 
-export default function ListItem({
+export function ListItem({
     text
 }: {
     text: string

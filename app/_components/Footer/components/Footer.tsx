@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-export default function Footer() {
+export function Footer() {
 
     const [text, setText] = useState('')
     const [email, setEmail] = useState('')
