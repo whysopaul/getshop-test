@@ -87,10 +87,18 @@ button {
 
 .button-orange {
     background: var(--color-orange);
+
+    &:hover {
+        background: var(--color-dark-orange);
+    }
 }
 
 .button-black {
     background: var(--color-black);
+
+    &:hover {
+        background: var(--color-gray-01);
+    }
 }
 
 .bullet-wrapper {

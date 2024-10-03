@@ -1,0 +1,1 @@
+export { ScreenDivOne } from './components/ScreenDivOne';

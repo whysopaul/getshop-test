@@ -9,6 +9,8 @@ import Novasphere from './_assets/novasphere.png';
 import Laptop from './_assets/laptop.png';
 import './home.scss';
 import ListItem from "./_components/ListItem";
+import { ScreenOne } from "./_components/ScreenOne";
+import { ScreenDivOne } from "./_components/ScreenDivOne";
 
 export default function Page() {
   return <>
@@ -21,40 +23,9 @@ export default function Page() {
       </div>
 
       <main className='main'>
-        <section className='screen-one'>
-          <div className='screen-one-text'>
-            <h1 className='h1'>Монетизируйте клиентскую базу, не снижая NPS</h1>
-            <p className='h3'>
-              Найдите идеальный баланс выручки и&nbsp;удовлетворённости пользователей с&nbsp;платформой рекламной монетизации
-            </p>
-          </div>
-          <div>
-            <button className='button button-orange'>
-              Заказать звонок
-            </button>
-          </div>
-        </section>
+        <ScreenOne />
 
-        <section className='screen-div-one'>
-          <div className='screen-div-one-header'>
-            <h2 className='h2'>
-              Дополнительные источники выручки для разных компаний
-            </h2>
-          </div>
-          <div className='screen-div-one-toggle'>
-            <div className='screen-div-one-toggle-buttons'>
-              <button className='h3'>
-                Операторам
-              </button>
-              <button className='h3'>
-                OTT сервисам
-              </button>
-            </div>
-            <p className='text-1'>
-              Найдите идеальный баланс выручки и удовлетворённости пользователей с платформой рекламной монетизации
-            </p>
-          </div>
-        </section>
+        <ScreenDivOne />
 
         <section className='screen-two'>
           <div className='screen-two-header'>
