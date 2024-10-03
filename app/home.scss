@@ -10,7 +10,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 30px;
+    padding: 14px 0 14px 30px;
+
+    &__scroll {
+        position: sticky;
+        top: 0;
+        background: var(--color-gray-03);
+        box-shadow: 0px 5px 5px 0px #A4ADAC40;
+        z-index: 1;
+    }
 }
 
 .header-logo {
@@ -31,6 +39,11 @@
 
     &:hover {
         color: var(--color-orange);
+    }
+
+    &__active {
+        color: var(--color-orange);
+        text-decoration: underline;
     }
 }
 
