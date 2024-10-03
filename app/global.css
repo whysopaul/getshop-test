@@ -26,16 +26,18 @@ body {
 h1,
 h2,
 h3,
-p {
-    padding: 0;
-    margin: 0;
-}
-
-button {
+p,
+button,
+input,
+textarea,
+ul {
     padding: 0;
     margin: 0;
     border: none;
     background: none;
+}
+
+button {
     color: inherit;
     font-family: inherit;
     font-size: 14px;
@@ -76,12 +78,19 @@ button {
     font-weight: var(--font-regular);
 }
 
-.button-orange {
+.button {
     width: 210px;
     padding: 12px 0;
     color: var(--color-white);
-    background: var(--color-orange);
     border-radius: 10px;
+}
+
+.button-orange {
+    background: var(--color-orange);
+}
+
+.button-black {
+    background: var(--color-black);
 }
 
 .bullet-wrapper {
