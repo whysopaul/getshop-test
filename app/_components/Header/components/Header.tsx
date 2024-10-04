@@ -23,6 +23,10 @@ export function Header({
                 paddingTop = 17
             }
 
+            if (window?.innerWidth <= 320) {
+                paddingTop = 0
+            }
+
             if (window?.scrollY >= paddingTop) {
                 setIsScroll(true)
 
