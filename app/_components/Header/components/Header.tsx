@@ -27,7 +27,7 @@ export function Header({
                 paddingTop = 0
             }
 
-            if (window?.scrollY >= paddingTop) {
+            if (window?.scrollY > paddingTop) {
                 setIsScroll(true)
 
                 let tempActiveScreen = 1
