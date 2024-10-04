@@ -2,6 +2,7 @@ import { Onest } from 'next/font/google';
 import './global.css';
 
 const onest = Onest({
+  subsets: ['cyrillic', 'latin'],
   display: 'swap'
 })
 
