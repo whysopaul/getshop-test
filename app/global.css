@@ -169,3 +169,29 @@ button {
         }
     }
 }
+
+@media only screen and (max-width: 320px) {
+    .h1 {
+        font-size: 36px;
+    }
+
+    .h2 {
+        font-size: 24px;
+        line-height: 1.275;
+    }
+
+    .h3 {
+        font-size: 20px;
+        line-height: 1.275;
+    }
+
+    .text-1 {
+        font-size: 16px;
+        line-height: 1.275;
+    }
+
+    .text-2 {
+        font-size: 14px;
+        line-height: 1.275;
+    }
+}

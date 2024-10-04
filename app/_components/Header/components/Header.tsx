@@ -62,19 +62,24 @@ export function Header({
         return () => window.removeEventListener('scroll', onScroll)
     }, [])
 
+    const handleNavClick = (ref: MutableRefObject<HTMLElement>) => {
+        setMobileMenu(false)
+        ref.current.scrollIntoView({ behavior: 'smooth' })
+    }
+
     return <header className={isScroll ? 'header header__scroll' : 'header header__default'}>
         <div className='header-inner'>
             <div className='header-logo' />
             <nav className='header-nav'>
                 <button
                     className={activeScreen === 2 ? 'header-nav-button header-nav-button__active' : 'header-nav-button'}
-                    onClick={() => refs[0].current.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => handleNavClick(refs[0])}
                 >
                     Преимущества
                 </button>
                 <button
                     className={activeScreen === 3 ? 'header-nav-button header-nav-button__active' : 'header-nav-button'}
-                    onClick={() => refs[1].current.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => handleNavClick(refs[1])}
                 >
                     Как работаем
                 </button>
@@ -88,13 +93,13 @@ export function Header({
                 <nav className='header-menu-mobile-nav'>
                     <button
                         className={activeScreen === 2 ? 'header-nav-button header-nav-button__active' : 'header-nav-button'}
-                        onClick={() => refs[0].current.scrollIntoView({ behavior: 'smooth' })}
+                        onClick={() => handleNavClick(refs[0])}
                     >
                         Преимущества
                     </button>
                     <button
                         className={activeScreen === 3 ? 'header-nav-button header-nav-button__active' : 'header-nav-button'}
-                        onClick={() => refs[1].current.scrollIntoView({ behavior: 'smooth' })}
+                        onClick={() => handleNavClick(refs[1])}
                     >
                         Как работаем
                     </button>
