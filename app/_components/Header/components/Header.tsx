@@ -10,14 +10,20 @@ export function Header({
 
     const [isScroll, setIsScroll] = useState(false)
     const [activeScreen, setActiveScreen] = useState(1)
-
+    const [mobileMenu, setMobileMenu] = useState(false)
 
     useEffect(() => {
         const screenTwoDims = refs[0].current.getBoundingClientRect()
         const screenThreeDims = refs[1].current.getBoundingClientRect()
 
         const onScroll = () => {
-            if (window?.scrollY >= 32) {
+            let paddingTop = 32
+
+            if (window?.innerWidth <= 768) {
+                paddingTop = 17
+            }
+
+            if (window?.scrollY >= paddingTop) {
                 setIsScroll(true)
 
                 let tempActiveScreen = 1
@@ -73,6 +79,31 @@ export function Header({
                     Как работаем
                 </button>
             </nav>
+            <button className='header-button-mobile' onClick={() => setMobileMenu(true)}>
+                <span />
+                <span />
+                <span />
+            </button>
+            <div className={mobileMenu ? 'header-menu-mobile header-menu-mobile__open' : 'header-menu-mobile header-menu-mobile__close'}>
+                <nav className='header-menu-mobile-nav'>
+                    <button
+                        className={activeScreen === 2 ? 'header-nav-button header-nav-button__active' : 'header-nav-button'}
+                        onClick={() => refs[0].current.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        Преимущества
+                    </button>
+                    <button
+                        className={activeScreen === 3 ? 'header-nav-button header-nav-button__active' : 'header-nav-button'}
+                        onClick={() => refs[1].current.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        Как работаем
+                    </button>
+                </nav>
+                <button className='header-menu-mobile-close' onClick={() => setMobileMenu(false)}>
+                    <span />
+                    <span />
+                </button>
+            </div>
         </div>
     </header>
 }
